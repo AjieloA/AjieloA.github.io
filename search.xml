@@ -2,32 +2,6 @@
 <search> 
   
   
-    
-    <entry>
-      <title>photo</title>
-      <link href="/2022/04/04/photo/"/>
-      <url>/2022/04/04/photo/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>3D数学</title>
-      <link href="/2022/04/04/3D%E6%95%B0%E5%AD%A6/"/>
-      <url>/2022/04/04/3D%E6%95%B0%E5%AD%A6/</url>
-      
-        <content type="html"><![CDATA[<p>[toc]</p><hr><hr><hr><h2 id="2022-03-21"><a href="#2022-03-21" class="headerlink" title="2022.03.21"></a>2022.03.21</h2><h3 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h3><p>左手坐标系：Z朝屏幕里；<br>右手坐标系：Z朝屏幕外；<br><img src="/2022/04/04/3D%E6%95%B0%E5%AD%A6/130743615239490.png" alt="左右手坐标系"><br>屏幕坐标系：以屏幕左上角或者左下角为原点；<br>![屏幕坐标系](photo/431113315226655.png =608x)</p><h3 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h3><p>概念：具有大小和方向<br>特性：只能位移，不能缩放和旋转<br>表示：A(x1,y1,z1)    B(x2,y2,z2)    P(x,y,z)<br>向量AB=(x2-x1,y2-y1,z2-z1)    P=(x-0,y-0,z-0)<br>数乘：5*P=(5x,5y,5z)<br>2D单位向量：||U||=X平方+Y平方再开方<br>3D向量求单位向量：<br>![3D向量图](photo/99172616236045.png =608x)<br>![3D向量单位向量](photo/355312616231799.png =608x)</p><h4 id="向量规范化"><a href="#向量规范化" class="headerlink" title="向量规范化"></a>向量规范化</h4><p>![向量规范化](photo/567235917230282.png =608x)</p><h4 id="向量计算"><a href="#向量计算" class="headerlink" title="向量计算"></a>向量计算</h4><p>加法：两个向量对应的分量相加；<br>集合意义：共起点，连终点，方向指向被减向量。减号前面是被减数。<br>![向量相加](photo/232734116249679.png =608x)<br>减法：两个向量对应的分量相减；<br>![向量减法](photo/77854616247283.png =608x)</p><h4 id="向量叉积"><a href="#向量叉积" class="headerlink" title="向量叉积"></a>向量叉积</h4><p>概念：叉积只能运用于3D向量，不能用于2D向量；<br>![向量叉积运算](photo/535961317248466.png =608x)<br>![叉积的几何意义](photo/357380317226026.png =608x)<br>法线：垂直于一个平面的向量；</p><h4 id="向量点积"><a href="#向量点积" class="headerlink" title="向量点积"></a>向量点积</h4><p>概念：点积是一个标量，没有方向；<br>![点积运算](photo/3211717243602.png =608x)<br>![根据余弦定理得出点积的几何性质](photo/537251917237148.png =608x)</p><h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><h4 id="矩阵的运算"><a href="#矩阵的运算" class="headerlink" title="矩阵的运算"></a>矩阵的运算</h4><p>![矩阵的加法](photo/17501018220812.png =608x)<br>![矩阵的减法](photo/25901118232263.png =608x)<br>![矩阵的数乘](photo/463351018223316.png =608x)<br>![矩阵的乘法](photo/202971418225148.png =608x)</p><h4 id="转置矩阵"><a href="#转置矩阵" class="headerlink" title="转置矩阵"></a>转置矩阵</h4><p>概念：矩阵的行列互换；<br>![原矩阵](photo/22781918224223.png =608x)<br>![转置后的矩阵](photo/471081818234925.png =608x)</p><h4 id="单位矩阵"><a href="#单位矩阵" class="headerlink" title="单位矩阵"></a>单位矩阵</h4><p>概念：一个正方形矩阵，对角线元素为1，其它元素为0；<br>![单位矩阵](photo/75801722220474.png =608x)<br>![单位矩阵的乘法](photo/582441722220613.png =608x)</p><h4 id="逆运算"><a href="#逆运算" class="headerlink" title="逆运算"></a>逆运算</h4><p>1、只有正方形矩阵才能做逆运算；<br>2、一个nxn的矩阵的逆矩阵仍然是一个nxn的矩阵；<br>3、不是所有的矩阵都有逆矩阵，有逆矩阵的矩阵可逆；<br>4、如果有可逆矩阵，那么这个矩阵一定是唯一的；<br>5、将一个矩阵和他的逆矩阵相乘，结果一定为单位矩阵；</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
   
   
 </search>
