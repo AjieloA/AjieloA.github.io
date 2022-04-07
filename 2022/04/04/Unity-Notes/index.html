@@ -369,6 +369,7 @@ public Student(string _name,int _stuno,int _age)
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -530,6 +531,26 @@ public Student(string _name,int _stuno,int _age)
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '26304a4e4eab54907b3d',
+      clientSecret: '9740caf9a4b7477d132b38f4775aedcd02b0c3af',
+      repo        : 'AjieloA/Comment',
+      owner       : 'AjieloA',
+      admin       : [''],
+      id          : 'df1452bfa5ca9d05c88df46b98135ebc',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
