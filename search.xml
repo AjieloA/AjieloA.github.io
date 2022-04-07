@@ -6,7 +6,7 @@
     <content><![CDATA[<hr>
 <hr>
 <hr>
-<h2 id="2022-02-23"><a href="#2022-02-23" class="headerlink" title="2022.02.23"></a>2022.02.23</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>const 关键字用于声明符号常量<br>    语法：<br>        const 数据类型 常量命=常量值；<br>        例：<br>                <code>const int Inttest=1；</code><br>    特性：<br>        const声明的常量值无法被修改；</p>
+<h2 id="2022-02-23"><a href="#2022-02-23" class="headerlink" title="2022.02.23"></a>2022.02.23</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p><a href="https://ajieloa.github.io/">test</a><br>const 关键字用于声明符号常量<br>    语法：<br>        const 数据类型 常量命=常量值；<br>        例：<br>                <code>const int Inttest=1；</code><br>    特性：<br>        const声明的常量值无法被修改；</p>
 <hr>
 <h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>“/”执行除法运算<br>“%”执行取余运算<br>值类型转空值：在数据类型后面添加问号可将值赋值为空；<br>例：<br>    <code>int ？ i = null ;</code></p>
 <h4 id="运算优先级"><a href="#运算优先级" class="headerlink" title="运算优先级"></a>运算优先级</h4><p><img src="/2022/04/04/Unity-Notes/53491301226560.png" alt="运算优先级"></p>
