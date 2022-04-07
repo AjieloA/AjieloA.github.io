@@ -1,23 +1,522 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block page_class %}
-  {% if is_home() %}page-home{% endif -%}
-{% endblock %}
 
-{% block content %}
-  <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
-  </section>
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+  <meta name="description" content="华北革命无浪漫">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ajie">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Ajie">
+<meta property="og:description" content="华北革命无浪漫">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Ajie">
+<meta property="article:tag" content="C# Unity">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Ajie</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Ajie" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Ajie</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/04/Unity-Notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ajie">
+      <meta itemprop="description" content="华北革命无浪漫">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ajie">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/04/Unity-Notes/" class="post-title-link" itemprop="url">Unity_Notes</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-04 18:59:31 / 修改时间：19:03:54" itemprop="dateCreated datePublished" datetime="2022-04-04T18:59:31+08:00">2022-04-04</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>12k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>11 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <hr>
+<hr>
+<hr>
+<h2 id="2022-02-23"><a href="#2022-02-23" class="headerlink" title="2022.02.23"></a>2022.02.23</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>const 关键字用于声明符号常量<br>    语法：<br>        const 数据类型 常量命=常量值；<br>        例：<br>                <code>const int Inttest=1；</code><br>    特性：<br>        const声明的常量值无法被修改；</p>
+<hr>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>“/”执行除法运算<br>“%”执行取余运算<br>值类型转空值：在数据类型后面添加问号可将值赋值为空；<br>例：<br>    <code>int ？ i = null ;</code></p>
+<h4 id="运算优先级"><a href="#运算优先级" class="headerlink" title="运算优先级"></a>运算优先级</h4><p><img src="/2022/04/04/Unity-Notes/53491301226560.png" alt="运算优先级"></p>
+<hr>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>转义字符：‘\’<br>例：<br>    <code>char charA=‘\’</code><br>常用转义表：</p>
+<p><img src="/2022/04/04/Unity-Notes/375721101220267.png" alt="转义表"></p>
+<hr>
+<h3 id="自加减运算"><a href="#自加减运算" class="headerlink" title="自加减运算"></a>自加减运算</h3><p>例：<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	```num2=num1--  ——  num2=num1；num1=num1-1；``` 先赋值再自减运算；</span><br><span class="line">___</span><br><span class="line">### 数据类型转换//装箱与拆箱</span><br><span class="line">数据类型转换：</span><br><span class="line">例：</span><br><span class="line">	```object ob=12.3; float fl= Convert.ToSingle(ob);```  把引用类型转换成单精度浮点数据类型</span><br><span class="line">装箱：将值类型包装成引用类型的处理过程；</span><br><span class="line">	备注：装箱可以隐式转换，拆箱必须显示的强制转换</span><br><span class="line">	例：</span><br></pre></td></tr></table></figure><br>    <em>int i=10;</em><br>    <em>object ob = i; //装箱</em><br>    <em>int j =int(ob); //拆箱</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">拆箱：将引用类型转换为值类型；</span><br><span class="line">	1.从托管堆中为新生成的引用对象分配内存；</span><br><span class="line">	2.将值类型的数据拷贝到刚刚分配的内存中；</span><br><span class="line">	3.返回托管堆中新分配的对象的地址；</span><br><span class="line">___</span><br><span class="line">Var类型：在程序运行时由程序自行判断数据类型；</span><br><span class="line">&lt;br&gt;</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">## 2022.02.24</span><br><span class="line">### 循环语句类型</span><br><span class="line">#### if...else语句</span><br><span class="line"></span><br><span class="line">#### switch...case语句</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>switch（变量）<br>{<br>    case &lt;值1&gt;: <em>单语句；</em><br>    &lt;语句块&gt;<br>    break;<br><br>    case &lt;值2&gt;:<br>    &lt;语句块&gt;<br>    break;<br><br>    case &lt;值3&gt;: <em>共用语句；</em><br>    case &lt;值4&gt;:<br>    case &lt;值5&gt;:<br>    &lt;语句块&gt;<br>    break;<br><br>    default:<em>如果与所有case都不匹配，执行以下代码；</em><br>    &lt;语句块&gt;<br>    break;<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### while循环</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>while(条件)<em>如果条件为真会一直循环执行&lt;语句块&gt;；</em><br>{<br>    &lt;语句块&gt;;<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### do...while循环_语句先执行一次&lt;语句块&gt;再判断，如果(条件)为真则再次执行；_</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>do<br>{<br>    &lt;语句块&gt;<br>}<br>while(条件)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### for循环</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>for(初始值;条件;增/减)<br>{<br>    &lt;语句块&gt;<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">循环步骤：</span><br><span class="line">a:初始值;b:条件;c:增/减</span><br><span class="line">第一步：执行a和b；</span><br><span class="line">第二步：如果b为true执行&lt;语句块&gt;；</span><br><span class="line">第三步：执行c，执行b，判断b是否为true；</span><br><span class="line">第四步：b为true继续执行&lt;语句块&gt;，为false结束for循环；</span><br><span class="line"></span><br><span class="line">___</span><br><span class="line">#### 结束循环</span><br><span class="line"></span><br><span class="line">break:立即结束跳出循环;</span><br><span class="line"></span><br><span class="line">continue:结束本次循环，继续执行下次循环；</span><br><span class="line">例：</span><br></pre></td></tr></table></figure>
+<p>for(int i=1;i&lt;=100;i++)<br>{<br>    if(i == 50)<br>    {<br>        continue;<br>    }<br>    Console.Writeline(i);<br>}<br>当i=50的时候不会执行continue后面的代码输出50，但是会继续进行循环i++并输出51…</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">goto//不推荐使用破坏程序完整性</span><br><span class="line"></span><br><span class="line">return:跳出循环，并返回一个值；</span><br><span class="line"></span><br><span class="line">___</span><br><span class="line"></span><br><span class="line">### 数组</span><br><span class="line">数组属于引用类型，存储在堆内存中；</span><br><span class="line">访问数组：使用索引访问数组，索引从0开始，索引长度为存储元素数量减1；</span><br><span class="line"></span><br><span class="line">#### 定义数组</span><br><span class="line">第一种定义法：直接赋值法；</span><br><span class="line">	```int[] intArray=&#123;40，50，70，80，90&#125;;```</span><br><span class="line">第二种定义法：规定长度不赋值，通过索引为数组赋值；</span><br></pre></td></tr></table></figure>
+<pre><code>string[] strArray=new string[3];
+strArray[0]=&quot;1&quot;;
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 数组扩容：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>int[] intArray={40,20,30,60}; 初始数组；<br>int[] tmp=new int[intArray.Length+1]; 预设扩容数组；<br>for(int i=0;i&lt;intArray.Length;i++) 将初始数组的数据迁移到预设数组tmp；<br>{<br>    tmp[i]=intArray[i];<br>}<br>int addNum=Convert.ToInt30(Console.ReadLine());<br>tmp[tmp.Length-1]=addNum; 将新增数据添加到预设数组tmp；<br>intArray=tmp; 让初始数组指向扩容后的数组内存；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 缩减数组：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>int[] intArray={40,20,30,60}; 初始数组；<br>int getNum=Convert.ToInt30(Console.ReadLine()); 需要减去的元素；<br>int inDex=-1; 预设需减去的元素的索引；<br>for(int i=0;i&lt;intArray.Length;i++)<br>{<br>    if(intArray[i]=getNum)<br>    {<br>            inDex=i;_遍历数组将匹配到的元素的索引赋值给预设索引inDex；_<br>            break;<br>    }<br>}<br>if( inDex&gt;=0)<br>{<br>    int[] tmp =new int[intArray.Length-1];<em>缩减长度的预设数组；</em><br>    for(i=0;i&lt;tem.Length;i++)_遍历数组将数据迁移到预设数组tmp；_<br>    {<br>            if(i&gt;=inDex)<br>            {<br>                    tmp[i]=intArray[i+1];<br>            }<br>            else<br>            {<br>                    tmp[i]=intArray[i];<br>            }<br>    }<br>}<br>intArray=tmp;<em>让初始数组指向缩减后的数组内存；</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">## 2022.02.25</span><br><span class="line">### 冒泡排序</span><br></pre></td></tr></table></figure>
+<p>for(int i=0;i&lt;Array.Length;i++)<br> {<br>        for(int j=1;j&lt;Array.Length-i;j++)<br>     {<br>        if(Array[j-1]&gt;Array[j])<br>         {<br>            int tmp=Array[j-1];<br>            Array[j-1]=Array[j];<br>            Array[j]=tmp;<br>         }<br>     }<br> }</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">### 动态数组：ArrayList</span><br><span class="line">引入命名空间：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>using System.Collection;<br>ArrayList arrayList= new ArrayList(); 声明动态数组；<br>arrayList.Add(值); 添加元素；<br>arrayList.Capacity ArrayList长度；<br>foreach (object o in arrayList)<br>{<br>    Console.WriteLine(o); 输出ArrayList中的元素；<br>}<br>arrayList.Sort(); 排序；<br>arrayList.Insert(插入位置索引,插入值);ArrayList插入值；<br>arrayList.Remove(删除值); ArrayList删除值；<br>arrayList.RemoveAt(删除值的索引值);<br>int randIndex=new Random().Next(开始值,结束值); 抽取随机数；<br>arrayList.Contains(arrayTest[值]); 判断arrayList数组内是否已经存在arrayTest[值]；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 字符串操作</span><br><span class="line"></span><br><span class="line">#### 字符串比较：CompareTo</span><br></pre></td></tr></table></figure>
+<p>int tmp=字符串1.CompareTo(字符串2);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果字符串1小于字符串2，tmp=-1，等于tmp=0，大于tmp=1；</span><br><span class="line">#### 定位字符串：IndexOf</span><br></pre></td></tr></table></figure>
+<p>int index=strArray.IndexOf(‘’/“”);<br>int index=strArray.LastIndexOf(‘’/“”);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IndexOf从前往后找，LastIndexOf从后往前找；</span><br><span class="line">#### 格式化字符串：Format</span><br><span class="line">例：输出钱的格式</span><br></pre></td></tr></table></figure>
+<p>double dMoney = 33445555.33333;<br>string strMoney = string.Format(“{0:c}”,dMoney);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">0表示占位符，c表示目标格式，dMoney表示目标字符串；</span><br><span class="line"></span><br><span class="line">![字符串格式化符号](Unity-Notes/193651201238693.png)</span><br><span class="line"></span><br><span class="line">___</span><br><span class="line">#### 连接字符串：+/Concat/Join</span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">## 2022.02.26</span><br><span class="line">### 字符串操作</span><br><span class="line">#### 分裂字符串：Split</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>string[] strArray=需要分裂的字符串数组.split(new char[]{‘根据什么符号分裂’})；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 判断字符串是否为空或者空格：IsNullOrEmpty</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>if(string.IsNullOrEmpty(需要判断的字符串))</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 清空字符串中的空格：Trim</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>字符串=字符串.Trim; 清空字符串内所有空格；<br>字符串=字符串.TrimStart; 清空字符串前面的空格；<br>字符串=字符串.TrimEnd; 清空字符串后面的空格；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 字符串替换方法：Replace</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>字符串=字符串.Replace(‘替换的字符’,’被替换的字符’);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 字符串大小写转换：ToUpper/ToLower</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>字符串=字符串.ToUpper(); 转换为大写；<br>字符串=字符串.ToLower(); 转换为小写；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 日期操作：DateTime</span><br><span class="line">#### 当前日期</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>DateTime dtime=DateTime.Now();</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 日期加减：AddDays()</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>DateTime dtime=DateTime.Now().AddDays(Value);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 输出日期格式转换</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>string strTime = dtime.ToString(“yyyy年MM月dd日 HH时mm分ss秒”) HH表示24小时制，hh表示12小时制；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">### 类：Class</span><br><span class="line">#### 类与对象</span><br><span class="line">类：模板，一种概念；</span><br><span class="line">对象：根据类（模板）创造出来的一个具体的实例；</span><br><span class="line">#### 构造函数</span><br><span class="line"> 概念：用于实例化对象并且在内存中分配存储数据的区域，new方法就是在内存中分配数据区域；</span><br><span class="line"> 语法：</span><br></pre></td></tr></table></figure>
+<p>[访问修饰符] 类名()<br>{<br>    //构造函数主体；<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br></pre></td></tr></table></figure>
+<p>public class Student()<br>{<br>    public string name;<br>    public int stuno;<br>    public int age;<br>    //无参构造函数；<br>    public Student()<br>    {</p>
+<pre><code>&#125;   
+//有参构造函数；
+public Student(string _name,int _stuno,int _age)
+&#123;
+    this.name=_name;
+    this.stuno=_stuno;
+    this.age=_age;
+&#125; 
+//this可以省略；
+//一个构造函数里面可以有多个方法；
+</code></pre>
+<p>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">### This关键字</span><br><span class="line">概念：表示访问这个类本身的数据；</span><br><span class="line">### 方法</span><br><span class="line">#### 方法的调用</span><br><span class="line">概念：方法指对象的行为；</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>[访问修饰符] 返回数据类型 方法名(参数列表)<br>{<br>    return 返回值；<br>}<br>//void 表示没有返回值；<br>//方法分无参和有参两种，定义方法时方法里的参数叫做形参；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#### 方法的参数：值参数,ref,out,params</span><br><span class="line">##### 值参数</span><br><span class="line">概念：值参数是将传入的值参数先复制一份，然后再传入方法中，方法中的运算等操作不会改变原有的参数值；</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>class Person<br>{<br>定义值参数方法：<br>    public void ChangeAge(int age)<br>    {<br>        age=age+10;<br>    }<br>}<br>调用值参数方法：<br>class Program<br>{<br>    int myage=10;<br>    Person p=new Person();<br>    p.ChangeAge(myage);<br>    Console.WriteLine(Myage);//输出结果为10，原参数未被修改；<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">##### 引用参数：ref</span><br><span class="line">概念：引用参数是直接将原参数的值直接赋予方法进行操作，方法操作后会改变原有参数的值,在定义方法和调用方法传参时都必须添加ref修饰符，且原参数必须赋值；</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>class Person<br>{<br>定义引用参数方法：<br>    public void ChangeAge(ref int age)<br>    {<br>        age=age+10;<br>    }<br>}<br>调用引用参数方法：<br>class Program<br>{<br>    int myage=10;<br>    Person p=new Person();<br>    p.ChangeAge(ref myage);<br>    Console.WriteLine(Myage);//输出结果为20，原参数被修改；<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 输出参数：out</span><br><span class="line">概念：讲原参数值赋予方法操作，会修改原参数的值，但是原参数可以不用赋值，定义方法和调用方法时参数前面必须有out修饰符；</span><br></pre></td></tr></table></figure>
+<p>class Person<br>{<br>定义输出参数方法：<br>    public void ChangeAge(out int age)<br>    {<br>        age=age+10;<br>    }<br>}<br>调用引用参数方法：<br>class Program<br>{<br>    int myage;<br>    Person p=new Person();<br>    p.ChangeAge(out myage);<br>    Console.WriteLine(Myage);//原参数不用赋值，输出结果为10，原参数被修改；<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 数组参数：params</span><br><span class="line">概念：强调表示一个可变的数组；</span><br></pre></td></tr></table></figure>
+<p>class Person<br>{<br>定义数组参数方法：<br>    public void ChangeAge(params int[] age)<br>    {<br>        forech(int i in age )<br>        {<br>            Console.WriteLine(i);<br>        }<br>    }<br>}<br>调用数组参数方法：<br>class Program<br>{<br>    int[] myage={12,13,14,15};<br>    Person p=new Person();<br>    p.ChangeAge(params myage);<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">## 2022.02.27</span><br><span class="line">### 静态字段：static</span><br><span class="line">概念：</span><br><span class="line">* 静态字段是长期驻留在内存中的；</span><br><span class="line">* 静态类中不允许出现实例化的字段或者方法；</span><br><span class="line">语法：</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+<p>//静态字段<br>public static [修饰符] 字段名；<br>//静态方法<br>public static [修饰符] 方法名()<br>{</p>
+<p>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">在普通类中静态字段/方法可以和实例化的方法同时存在，实例化的方法可以访问静态字段，静态方法也可以访问静态字段；</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">## 2022.03.07</span><br><span class="line">### 方法的重载</span><br><span class="line">* 方法重载必须要求的是方法名字和返回值一致；</span><br><span class="line">* 方法的参数个数不一致；</span><br><span class="line">* 方法的参数类型不一致；</span><br><span class="line">### 命名空间</span><br><span class="line">引用：using 命名空间；</span><br><span class="line">### 封装</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>private string cardid;<br>private double bankMoney;<br>//get只读方法；<br>public string Cardid<br>{<br>    get<br>    {<br>        return cardid;<br>    }<br>}<br>//set可读写；<br>public double BankMoney<br>{<br>    get<br>    {<br>        return bankMoney;<br>    }<br>    set<br>    {<br>        bankMoney=value;<br>    }<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 继承</span><br><span class="line">子类只继承父类的非priavte属性和无参构造函数，如果需要子类继承父类的有参构造函数，需要使用&quot;:base()&quot;关键字；</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>//父类，基类；<br>public class Person<br>{<br>    private string name;<br>    private string sex;<br>    private int age;<br>    public string Name<br>    {<br>        get<br>        {<br>            return name;<br>        }<br>        set<br>        {<br>            name=value;<br>        }<br>    }<br>    public string Sex<br>    {<br>        get<br>        {<br>            return sex;<br>        }<br>        get<br>        {<br>            sex=value;<br>        }<br>    }<br>    public int Age<br>    {<br>        get<br>        {<br>            return age;<br>        }<br>        set<br>        {<br>            age=value;<br>        }<br>    }<br>    public Person(string _name,string _sex,int _age)<br>    {<br>        this.name=_name;<br>        this.sex=_sex;<br>        this.age=_age;<br>    }<br>    public Persson()<br>    {</p>
+<pre><code>&#125;
+</code></pre>
+<p>}<br>//子类，派生类；<br>public class Doctor:Person<br>{<br>//子类在继承父类的基础上添加属性；<br>    private string departName;<br>    public string DepartName<br>    {<br>        get<br>        {<br>            return departName;<br>        }<br>        set<br>        {<br>            departName=value;<br>        }<br>    }<br>    //子类继承父类有参构造函数；<br>    public Doctor(string _name,string _sex,int _age,string _departName):base(_name,_sex,_age)<br>    {<br>        this.departName=_dpartName;<br>    }<br>}<br>//调用；<br>class Program<br>{<br>    static void Main(string[] args)<br>    {<br>    //子类默认继承父类的无参构造函数，所以父类需要创建无参构造函数；<br>    //子类继承父类无参构造函数的使用；<br>        Doctor d=new Doctor();<br>        d.Name=”张三”;<br>        d.Sex=”男”;<br>        d.Age=12;<br>   //子类继承父类有参构造函数的使用；<br>        Doctor d=new Doctor(“张三”,”男”,12,”内科”);<br>    }<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 方法的重写与覆盖</span><br><span class="line">##### 重写_虚方法：virtual/override</span><br><span class="line">概念：父类中定义方法时在方法（构造函数）前添加virtual关键字表示该方法可以在子类中重写，子类在继承引用方法的时候需要添加override关键字，可以选择重写或者直接引用父类方法（base.方法名）；</span><br><span class="line">语法：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>//父类<br>public class Person<br>{<br>    public virtual void ShowInfo()<br>    {</p>
+<pre><code>&#125;
+</code></pre>
+<p>}<br>//子类<br>class Doctor<br>{<br>    public override void ShowInfo()<br>    {<br>        //直接继承引用父类的方法；<br>        base.ShowInfo();<br>        //重写方法；<br>        Console.WriteLine(“”);<br>    }<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">##### 覆盖：new</span><br><span class="line">概念：在子类中定义与父类中同名的方法（构造函数），可以在方法前添加new关键字对父类中的方法进行覆盖；</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>//父类<br>public class Person<br>{<br>    public void ShowInfo()<br>    {</p>
+<pre><code>&#125;
+</code></pre>
+<p>}<br>//子类<br>class Doctor<br>{<br>    public new void ShowInfo()<br>    {</p>
+<pre><code>&#125;
+</code></pre>
+<p>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">### 多态</span><br><span class="line">概念：多态是指两个或者多个属于不同类的对象，对同一个消息作出不同响应能力；</span><br><span class="line">#### 抽象类：abstract</span><br><span class="line">特征：</span><br><span class="line">* 抽象类不能直接被实例化，只能通过子类去实例化；</span><br><span class="line">* 抽象类不能用sealed修饰符修改，抽象类都是拿来继承的；</span><br><span class="line">* 从抽象类派生的非抽象类必须包括继承继承所有抽象的方法和抽象访问器的实现；</span><br><span class="line">语法：</span><br><span class="line">    public string AnimalColor</span><br></pre></td></tr></table></figure>
+<p>//抽象父类<br>public abstract class Animal<br>{<br>    private string animalColor;<br>    private string animalName;<br>    public string AnimalColor<br>    {<br>        get<br>        {<br>            return animalColor;<br>        }<br>        set<br>        {<br>            animalColor=value;<br>        }<br>    }<br>    public string AnimalName<br>    {<br>        get<br>        {<br>            return animalName;<br>        }<br>        set<br>        {<br>            animalName=value;<br>        }<br>    }<br>    public Animal(string _animalColor,string _animalName)<br>    {<br>        this.animalColor=_animalColor;<br>        this.animalName=_animalName;<br>    }<br>    //在父类定义抽象方法,那么方法没有主体，只有定义,但是派生类必须重写该方法；<br>    public abstract void ShowIt();<br>}</p>
+<p>//子类继承<br>class Dog:Animal<br>{<br>    //子类重写抽象方法；<br>    public override void ShowIt()<br>    {<br>        //方法体；<br>    }<br>}<br>//实例化<br>class Program<br>{<br>    static void Main(string[] args)<br>    {<br>    //错误实例化方法，抽象类不能直接被实例化；<br>        Animal animal=new Animal();<br>    //正确实例化方法；<br>        Animal dog=new Dog();<br>        //或者<br>        Dog dog=new Dog();<br>    }<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">## 2022.03.09</span><br><span class="line">### 多态</span><br><span class="line">#### 接口：interface</span><br><span class="line">* 接口是对子类的一种约束，具有较好的扩展性；</span><br><span class="line">* 接口之中只能对方法进行定义；</span><br><span class="line">* 接口和抽象类的区别在于，抽象类有字段和属性，接口没有字段和属性；</span><br><span class="line">* 一个类只能继承一个抽象类，但是可以继承多个接口；</span><br><span class="line">* 继承接口的子类必须重写接口定义的方法，但是不用override关键字；</span><br><span class="line">* 接口的命名以“I”开头；  </span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>//定义接口<br>interface IBank<br>{<br>    viod Count(double num);<br>}<br>//子类继承<br>class UserCard:IBank<br>{<br>    private double bankMoney;<br>    public double BankMoney<br>    {<br>        get<br>        {<br>            return this.bankMoney;<br>        }<br>        set<br>        {<br>            if(value&lt;0)<br>            {<br>                this.bankMoney=0;<br>            }<br>            else<br>            {<br>                this.bankMoney=value;<br>            }<br>        }<br>    }<br>    public void Count(double num)<br>    {<br>        this.bankMoney-=num;<br>    }<br>}<br>//调用<br>class Program<br>{<br>    static void Main(strig[] args)<br>    {<br>        UserCard User=new UserCard();<br>        User.BankMoney=200;<br>        User.Count(100);<br>    }<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">### 集合</span><br><span class="line">#### 哈希表集合：Hash</span><br><span class="line">* Hash集合是键值对，每个键都是唯一的；</span><br><span class="line">* 使用Hash集合需要引入命名空间：System.Collections；</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>class Program<br>{<br>    static void Main(strig[] args)<br>    {<br>        Hashtable hash=new Hashtable();<br>        //往Hash集合添加数据；<br>        hash.Add(1,”hello”);<br>        hash.Add(2,”world”);<br>        //访问Hash集合内的单个数据，使用键的方法；<br>        Console.WriteLine(hash[1]);<br>        //访问所有的数据第一种方法：遍历;<br>        var keys=hash.Keys;//hash键的集合；<br>        foreach(object o in keys)<br>        {<br>            Console.WriteLine(hash[o]);<br>        }<br>        //第二种，使用遍历器；<br>        var ie=hash.GetEnumerator();<br>        while(ie.MoveNext())<br>        {<br>           Console.WriteLine(ie.value);<br>        }<br>    }<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">## 2022.03.19</span><br><span class="line">### 泛型：List&lt;数据类型&gt;</span><br><span class="line">概念：泛型的特点就是类型的安全，规定了在集合中所存储的数据类型；</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>using System.Collections.Generic;</p>
+<p>List&lt;数据类型&gt; list = new List&lt;数据类型&gt;();<br>list.Add(1);//添加数据；<br>//泛型的遍历1；<br>foreach(int i in list)<br>{<br>    Console.WriteLine(“输出的数据：”+i);<br>}<br>//泛型的遍历2；<br>for(int i=0;i&lt;list.Count;i++)<br>{<br>    Console.WriteLine(“泛型的索引{0}，泛型的值{1}”,i,list[i]);<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 字典：Dictionary&lt;键的数据类型，值的数据类型&gt;</span><br><span class="line">概念：键值对存储，可以使用泛型；</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>using System.Collection;<br>Dictionary&lt;键的数据类型，值的数据类型&gt; dic = new Dictionary&lt;键的数据类型，值的数据类型&gt;();<br>dic.Add(1,1);<br>//遍历字典数据方法1；<br>var skeys = dic.Keys;<br>foreach(string i in skeys)<br>{<br>    Console.WriteLine(“键：{0}，值“{1}”,i,dic[i]);<br>}<br>//遍历字典数据方法2：遍历器；<br>var i = dic.GetEnumerator();<br>while (i.Move.Next())<br>{<br>    Console.WriteLine(“键：{0}，值：{1}”,i.Current.Key,I.Current.value);<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 异常处理</span><br><span class="line">概念：异常指在程序 运行中出现的问题，而非编译时出现的问题；</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>try<br>{<br>    语句块；<br>}<br>catch(Exception ex)<br>{<br>    Console.WriteLine(“异常原因：”+ex.Message);<br>}<br>finally//finally 表示是否发生异常都会执行的代码；<br>{<br>    语句块；<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">## 2022.03.20</span><br><span class="line">### 数据流：System.IO;</span><br><span class="line">#### 创建删除文件：File；</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>using System.IO;<br>string strFilePath = “I:\test.txt”;<br>File.Create(strFilePath);//创建文件；<br>File.Delete(strFilePath);//删除文件；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 创建删除文件夹：Directory;</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>using System.IO;<br>string strDirPath = “I:\Test”;<br>Directory.CreateDirectory(strDirPath);//创建文件夹；<br>Directory.Delete(strDirPath);//删除文件夹;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 写入读取数据：FileStream,StreamWriter,StreaReader;</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>using System.IO;<br>string strPath = “I:\test.txt”;<br>FileStream fstream = new FileStream(strPath,FileMode.OpenOrCreate);//路径下如果有文件就直接打开文件，没有则创建；<br>StreamWriter swriter = new StreamWriter(strPath);<br>swriter.Write(“写入数据”);<br>swriter.Close();//关闭流的方法；<br>fstream.Close();<br>swriter.Dispose();//流的资源释放；<br>fstream.Dispose();<br>StreamReader reader = new StreamReader(strPath);<br>string strRead = reader.ReadToEnd();//从文件中读取数据；<br>reader.Close();<br>reader.DisPose();</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 通过字节转码方式写入读取</span><br><span class="line"> 语法：</span><br></pre></td></tr></table></figure>
+<p>//通过字节转码将数据写到文件中；<br>FileStream fstream = new FileStream(“I:\Program.cs”,FileMode.OpenOrCreate);<br>string strGet = Console.ReadLine();<br>//需要吧字符串数据进行转码，转成字节数据；<br>Byte[] getBytes = System.Text.Encoding.UTF8.GetBytes(strGet);<br>//需要把字节数据流写入到文件流中；<br>fstream.Write(getBytes,0,getBytes.Length);<br>fstream.Flush();//清除缓冲区的内容；<br>fstream.Close();<br>fstream.Dispose();<br>// 通过字节转码读取文件；<br>FileStream fstream = new FileStream(“I:\Program.cs”,FileMode.OpenOrCreate);<br>//构建字节码；<br>Byte[] bytes = new Byte[fesream.Length];<br>//把流的数据读取到字节码；<br>fstream.Read(bytes,0,(int)fstream.Length);<br>//字节码转换成字符串；<br>string strGetData = System.Text.Encoding.UTF8.GetString(bytes);<br>fstream.Close();<br>fstream.Dispose();</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 委托：delegate；</span><br><span class="line">概念：委托和类一样，是一种用户自定义的类型。但类表示的是数据和方法的集合，而委托则持有一个或多个方法，以及一系列预定义操作；</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>delegate double DelOperator(double num1,double num2);<br>class Program<br>{<br>    static void Main(string[] args)<br>    {<br>        //在实例化委托的时候，会把方法名作为一个参数传入；<br>        DelOperator delop = new DelOperator(Add)；//指向Add这个方法；<br>        delop += new DelOperator(Div);//委托指向Div方法；<br>        delop -= new DelOperator(Div);//委托取消指向Div方法；<br>        //委托调用方法1；<br>        double reslut = delop.Invoke(3,5);<br>        //委托调用方法2；<br>        double result = delop(3,5);<br>    }<br>    static double Add(double a,double b)<br>    {<br>        return a+b;<br>    }<br>    static double Dic(double a,double b)<br>    {<br>        return a-b;<br>    }<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">## 2022.03.21</span><br><span class="line">### 线程：Thread</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
+<p>using System.Threading;<br>Thread t1 = new Thread(new ThreadStart(Test1));//ThreadStart()是不带参数的线程；<br>Thread t2 = new Thread(new ParameterizedThreadStart(Test2));//ParameterizedThreadStart()是带参数的线程；<br>t1.Name = “线程1”;//给线程命名；<br>t1.Start();//执行线程；<br>static void Test1()<br>{<br>    代码块；<br>    Thread.Sleep(2000);//线程休眠2秒；<br>    Thread.CurrentThread.Join(2000);//线程阻塞2秒，线程阻塞时不会影响其它线程执行；<br>}</p>
+<p>```
+ </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Ajie</p>
+  <div class="site-description" itemprop="description">华北革命无浪漫</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ajie</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">12k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
