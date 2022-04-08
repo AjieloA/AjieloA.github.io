@@ -2,17 +2,17 @@
 <search>
   <entry>
     <title>Unity_Notes</title>
-    <url>/ajieloa.gitee.io/2022/04/04/Unity-Notes/</url>
+    <url>https://ajieloa.github.io/%20gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/2022/04/04/Unity-Notes/</url>
     <content><![CDATA[<hr>
 <hr>
 <hr>
 <h2 id="2022-02-23"><a href="#2022-02-23" class="headerlink" title="2022.02.23"></a>2022.02.23</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p><a href="https://ajieloa.github.io/">test</a><br>const 关键字用于声明符号常量<br>    语法：<br>        const 数据类型 常量命=常量值；<br>        例：<br>                <code>const int Inttest=1；</code><br>    特性：<br>        const声明的常量值无法被修改；</p>
 <hr>
 <h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>“/”执行除法运算<br>“%”执行取余运算<br>值类型转空值：在数据类型后面添加问号可将值赋值为空；<br>例：<br>    <code>int ？ i = null ;</code></p>
-<h4 id="运算优先级"><a href="#运算优先级" class="headerlink" title="运算优先级"></a>运算优先级</h4><p><img src="/ajieloa.gitee.io/ajieloa.gitee.io/2022/04/04/Unity-Notes/53491301226560.png" alt="运算优先级"></p>
+<h4 id="运算优先级"><a href="#运算优先级" class="headerlink" title="运算优先级"></a>运算优先级</h4><p><img src="https://ajieloa.github.io/ gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/ gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/2022/04/04/Unity-Notes/53491301226560.png" alt="运算优先级"></p>
 <hr>
 <h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>转义字符：‘\’<br>例：<br>    <code>char charA=‘\’</code><br>常用转义表：</p>
-<p><img src="/ajieloa.gitee.io/ajieloa.gitee.io/2022/04/04/Unity-Notes/375721101220267.png" alt="转义表"></p>
+<p><img src="https://ajieloa.github.io/ gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/ gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/2022/04/04/Unity-Notes/375721101220267.png" alt="转义表"></p>
 <hr>
 <h3 id="自加减运算"><a href="#自加减运算" class="headerlink" title="自加减运算"></a>自加减运算</h3><p>例：<br>    <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">	```num2=num1--  ——  num2=num1；num1=num1-1；``` 先赋值再自减运算；</span><br><span class="line">___</span><br><span class="line">### 数据类型转换//装箱与拆箱</span><br><span class="line">数据类型转换：</span><br><span class="line">例：</span><br><span class="line">	```object ob=12.3; float fl= Convert.ToSingle(ob);```  把引用类型转换成单精度浮点数据类型</span><br><span class="line">装箱：将值类型包装成引用类型的处理过程；</span><br><span class="line">	备注：装箱可以隐式转换，拆箱必须显示的强制转换</span><br><span class="line">	例：</span><br></pre></td></tr></table></figure><br>    <em>int i=10;</em><br>    <em>object ob = i; //装箱</em><br>    <em>int j =int(ob); //拆箱</em></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">拆箱：将引用类型转换为值类型；</span><br><span class="line">	1.从托管堆中为新生成的引用对象分配内存；</span><br><span class="line">	2.将值类型的数据拷贝到刚刚分配的内存中；</span><br><span class="line">	3.返回托管堆中新分配的对象的地址；</span><br><span class="line">___</span><br><span class="line">Var类型：在程序运行时由程序自行判断数据类型；</span><br><span class="line">&lt;br&gt;</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">***</span><br><span class="line">## 2022.02.24</span><br><span class="line">### 循环语句类型</span><br><span class="line">#### if...else语句</span><br><span class="line"></span><br><span class="line">#### switch...case语句</span><br><span class="line">语法：</span><br></pre></td></tr></table></figure>
