@@ -3,11 +3,11 @@
   <title>Ajie</title>
   
   <subtitle>华北革命无浪漫</subtitle>
-  <link href="github:https://ajieloa.github.io/ gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/atom.xml" rel="self"/>
+  <link href="https://ajieloa.gitee.io/ajieloa.gitee.io/%20,%20https://ajieloa.github.io/atom.xml" rel="self"/>
   
-  <link href="github:https://ajieloa.github.io/ gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/"/>
+  <link href="https://ajieloa.gitee.io/ajieloa.gitee.io/%20,%20https://ajieloa.github.io/"/>
   <updated>2022-04-07T10:47:05.323Z</updated>
-  <id>github:https://ajieloa.github.io/ gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/</id>
+  <id>https://ajieloa.gitee.io/ajieloa.gitee.io/%20,%20https://ajieloa.github.io/</id>
   
   <author>
     <name>Ajie</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Unity_Notes</title>
-    <link href="github:https://ajieloa.github.io/ gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/2022/04/04/Unity-Notes/"/>
-    <id>github:https://ajieloa.github.io/ gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/2022/04/04/Unity-Notes/</id>
+    <link href="https://ajieloa.gitee.io/ajieloa.gitee.io/%20,%20https://ajieloa.github.io/2022/04/04/Unity-Notes/"/>
+    <id>https://ajieloa.gitee.io/ajieloa.gitee.io/%20,%20https://ajieloa.github.io/2022/04/04/Unity-Notes/</id>
     <published>2022-04-04T10:59:31.000Z</published>
     <updated>2022-04-07T10:47:05.323Z</updated>
     
@@ -38,9 +38,9 @@
     
     
     
-    <category term="Study" scheme="github:https://ajieloa.github.io/ gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/tags/Study/"/>
+    <category term="Study" scheme="https://ajieloa.gitee.io/ajieloa.gitee.io/%20,%20https://ajieloa.github.io/tags/Study/"/>
     
-    <category term="Unity" scheme="github:https://ajieloa.github.io/ gitee:https://ajieloa.gitee.io/ajieloa.gitee.io/tags/Unity/"/>
+    <category term="Unity" scheme="https://ajieloa.gitee.io/ajieloa.gitee.io/%20,%20https://ajieloa.github.io/tags/Unity/"/>
     
   </entry>
   
